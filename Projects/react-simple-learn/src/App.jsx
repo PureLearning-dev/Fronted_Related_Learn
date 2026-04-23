@@ -1,7 +1,7 @@
 import './App.css'
 import MovieCard from './components/MovieCard';
 
-// // 注入到首页的组件
+// // 注入到index.html的组件
 // function App() {
 //     return (
 //       // 组件必须含有父元素，所以必须使用 <div></div> 或者<><> 进行包裹内部元素
