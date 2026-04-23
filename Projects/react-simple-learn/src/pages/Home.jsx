@@ -1,3 +1,5 @@
+import "../css/Home.css"
+
 // 首页页面
 // 搜索表单
 
@@ -40,7 +42,7 @@ function Home() {
 
     return (
         <div className="home">
-            <form className="search-bar" onSubmit={onMovieSearch}>
+            <form className="search-form" onSubmit={onMovieSearch}>
                 <input type={"text"} placeholder={"查找电影"} className={"search-input"} value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} />
                 <button className={"search-btn"} type={"submit"}>查找</button>
             </form>

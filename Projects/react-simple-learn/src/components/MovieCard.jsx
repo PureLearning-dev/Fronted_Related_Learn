@@ -1,3 +1,5 @@
+import "../css/MovieCard.css"
+
 function MovieCard({movie}) {
     function onFavoriteClick() {
         alert("你点赞了这部电影");
