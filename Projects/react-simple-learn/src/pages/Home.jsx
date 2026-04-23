@@ -47,7 +47,12 @@ function Home() {
             <div className="movies-grid">
                 {movies.map(movie => (
                     // 动态加载组件，一定需要添加key属性，让React可以识别具体的组件
-                    <MovieCard movie={movie} key={movie.id}></MovieCard>
+                    // <MovieCard movie={movie} key={movie.id}></MovieCard>
+
+                    // 对组件进行选择渲染
+                    // 初试searchQuery是""，所有组件都可以成功渲染，输入input之后，就会进行选择渲染了
+                    // 下面的&&是利用了js对短路原理进行选择渲染的
+                    movie.title.startsWith(searchQuery) && <MovieCard movie={movie} key={movie.id} />
                 ))}
             </div>
 
