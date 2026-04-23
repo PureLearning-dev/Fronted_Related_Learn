@@ -1,6 +1,8 @@
-import './App.css'
-import MovieCard from './components/MovieCard';
+import './App.css';
 import Home from "./pages/Home.jsx";
+import {Routes, Route} from 'react-router-dom';
+import Favorites from "./pages/Favorites.jsx";
+import NavBar from "./components/NavBar.jsx";
 
 // // 注入到index.html的组件
 // function App() {
@@ -35,11 +37,19 @@ import Home from "./pages/Home.jsx";
 //     )
 // }
 
+
+// React中要使用路由，需要执行 pnpm install react-router-dom 命令
 function App() {
     return (
-        <>
-            <Home />
-        </>
+        <div>
+            <NavBar />
+            <main className="main-container">
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/favorites" element={<Favorites />} />
+                </Routes>
+            </main>
+        </div>
     );
 }
 
