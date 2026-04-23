@@ -1,5 +1,6 @@
 import './App.css'
 import MovieCard from './components/MovieCard';
+import Home from "./pages/Home.jsx";
 
 // // 注入到index.html的组件
 // function App() {
@@ -20,18 +21,26 @@ import MovieCard from './components/MovieCard';
 //     return <p>{display}</p>;
 // }
 
+// function App() {
+//     return (
+//         <div>
+//             <MovieCard movie={
+//                 {
+//                     title: "当幸福来敲门",
+//                     release_date: "2020-05-01",
+//                     url: "https://api.themoviedb.org/3/movies/",
+//                 }
+//             }/>
+//         </div>
+//     )
+// }
+
 function App() {
     return (
-        <div>
-            <MovieCard movie={
-                {
-                    title: "当幸福来敲门",
-                    release_date: "2020-05-01",
-                    url: "https://api.themoviedb.org/3/movies/",
-                }
-            }/>
-        </div>
-    )
+        <>
+            <Home />
+        </>
+    );
 }
 
 export default App
